@@ -4,155 +4,162 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { mensuitImage, blazerImage, kurtaImage, poloImage, indowesternImage, shirt, wedding, formal, linen, cashmere, nehru, linensuit, shirts, polot, insta1, insta2, insta3, insta4, rely, tabish1 } from '../assets/index';
-import weddingVideo from '../assets/weddingvideo.mp4';
-
+import weddingVideo from '../assets/weddingVideo.mp4';
+// Import the new images from the assets folder
+import kurtiImage from '../assets/kurti.jpeg';
+import lehngaImage from '../assets/lehnga.jpeg';
+import sareeImage from '../assets/saree.jpeg';
+import dupattaImage from '../assets/dupatta.jpeg'; // Make sure the file extension matches exactly (.jpg vs .jpeg)
+import suitImage from '../assets/suit.jpeg';
+import suit from '../assets/1.jpeg';
+import kurti from '../assets/2.jpeg';
+import lehnga from '../assets/3.jpeg';
+import banarasi from '../assets/banarasi.jpeg';
+import desi from '../assets/desi.jpeg';
+import sareee from '../assets/sareee.jpeg';
+import lehngaaa from '../assets/lehngaaa.jpeg';
+import kurtii from '../assets/kurtii.jpeg';
+import home from '../assets/home.jpeg';
 const categories = [
   {
     _id: '1',
-    name: 'Suits',
-    image: mensuitImage,
-    description: 'Perfectly tailored suits for the modern gentleman. Custom-fit for any occasion.',
+    name: 'Kurti',
+    image: home,
+    description: 'Chic, comfortable styles designed for your everyday elegance.',
   },
   {
     _id: '2',
-    name: 'Blazers',
-    image: blazerImage,
-    description: 'Versatile blazers that combine classic style with contemporary design.',
+    name: 'Lehnga',
+    image: lehngaImage,
+    description: 'Regal silhouettes and intricate embroidery for your grandest moments.',
   },
   {
     _id: '3',
-    name: 'Kurtas',
-    image: kurtaImage,
-    description: 'Elegant and comfortable kurtas, crafted from the finest fabrics for a regal look.',
+    name: 'Saree',
+    image: sareeImage,
+    description: 'Six yards of timeless grace blending heritage with modern style.',
   },
   {
     _id: '4',
-    name: 'Polo T-Shirts',
-    image: poloImage,
-    description: 'Premium polo t-shirts that offer a perfect blend of comfort and casual style.',
+    name: 'Dupatta',
+    image: dupattaImage,
+    description: 'Exquisite drapes to add a luxurious finish to any ensemble.',
   },
   {
     _id: '5',
-    name: 'Indo Western',
-    image: indowesternImage,
-    description: 'A fusion of traditional and modern styles for a unique and sophisticated look.',
-  },
-  {
-    _id: '6',
-    name: 'Shirts',
-    image: shirt,
-    description: 'Crisp, custom-fitted shirts designed for unparalleled comfort and elegance.',
+    name: 'Suit',
+    image: suitImage,
+    description: 'Beautifully tailored suits that perfectly balance tradition and trend.',
   },
 ];
 
 const gridItems = [
   {
     _id: '1',
-    title: 'Wedding Attire',
-    image: wedding,
-    link: '/products/category/wedding',
+    title: 'Lehnga',
+    image: suit,
+    link: '/products/category/Lehengas',
   },
   {
     _id: '2',
-    title: 'Formal Wear',
-    image: formal,
-    link: '/products/category/formal',
+    title: 'Saree',
+    image: kurti,
+    link: '/products/category/Sarees',
   },
   {
     _id: '3',
-    title: 'Tailored Suits',
-    image: rely,
-    link: '/products/category/suits',
+    title: 'Kurti',
+    image: lehnga,
+    link: '/products/category/Kurtis',
   }
 ];
 
 const newArrivals = [
   {
     _id: '68b15e83966360f5b90c2936',
-    name: 'Linen Blend Suit',
-    price: '450.00',
-    image: linensuit
+    name: 'Royal Velvet Lehenga',
+    price: '8500.00',
+    image: lehngaaa
   },
   {
     _id: '68b17de7843fba334ca746db',
-    name: 'Silk Nehru Jacket',
-    price: '250.00',
-    image: nehru
+    name: 'Banarasi Silk Saree',
+    price: '4500.00',
+    image: banarasi
   },
   {
     _id: '68b17e15843fba334ca74730',
-    name: 'Custom Monogrammed Shirt',
-    price: '150.00',
-    image: shirts
+    name: 'Chikankari Kurti Set',
+    price: '1800.00',
+    image: kurtii
   },
   {
     _id: '68b17e5d843fba334ca74778',
-    name: 'WindowPayne Utility Jacket',
-    price: '200.00',
-    image: cashmere
+    name: 'Embroidered Anarkali',
+    price: '6200.00',
+    image: sareee
   },
   {
     _id: '68b17e62843fba334ca747be',
-    name: 'Panel Polo T-Shirt',
-    price: '150.00',
-    image: polot
+    name: 'Phulkari Heavy Dupatta',
+    price: '950.00',
+    image: dupattaImage
   },
   {
     _id: '68b17e65843fba334ca74804',
-    name: 'Cuban Linen Shirt',
-    price: '200.00',
-    image: linen
+    name: 'Floral Organza Saree',
+    price: '4500.00',
+    image: desi // Reusing sareeImage for variation
   },
 ];
-
 const testimonials = [
   {
-    quote: "Best fitted white denim shirt, more white denim than expected, flexible crazy soft.",
-    author: "DENIM CRAZE"
+    quote: "The velvet Lehenga I bought for my sister's wedding was stunning. The embroidery detailing is unmatched!",
+    author: "Ayesha Khan"
   },
   {
-    quote: "Absolutely loved the tailoring, exceeded my expectations and felt premium.",
-    author: "UPTOP"
+    quote: "I've never worn a Saree that drapes so effortlessly. The silk quality is pure luxury.",
+    author: "Priya Sharma"
   },
   {
-    quote: "Stylish, comfortable, and elegant. Perfect fit for my big day!",
-    author: "BRIDEGROOM"
+    quote: "Finally found a brand that understands ethnic chic. My Anarkali suit fits like a dream.",
+    author: "Zara Malik"
   },
   {
-    quote: "Faisal tailored my sherwani perfectly, the fitting was flawless and everyone praised it.",
-    author: "Faisal Khan"
+    quote: "The bridal collection at R Rivaaz is breathtaking. My wedding outfit was everything I imagined and more.",
+    author: "Sneha Reddy"
   },
   {
-    quote: "Adnan’s craftsmanship is next level. My three-piece suit felt like it was made just for me.",
-    author: "Adnan Ali"
+    quote: "Ordered a casual Kurti set for office wear. It's so comfortable yet stylish enough for evening outings.",
+    author: "Fatima Siddiqui"
   },
   {
-    quote: "Shahnawaz made my wedding outfit exactly how I imagined. The embroidery was breathtaking.",
-    author: "Shahnawaz Sheikh"
+    quote: "The Phulkari Dupatta added such a vibrant touch to my plain suit. Everyone asked me where I got it!",
+    author: "Simran Kaur"
   },
   {
-    quote: "Sharzil designed my formal wear with such precision. Every detail was on point.",
-    author: "Sharzil Ahmed"
+    quote: "Customer service helped me pick the right size, and the alteration was spot on. Highly recommend!",
+    author: "Riya Verma"
   },
   {
-    quote: "Suraj gave me the most comfortable kurta I’ve ever worn. Truly premium stitching.",
-    author: "Suraj Verma"
+    quote: "Beautiful craftsmanship. The mirror work on the choli was exquisite and very neat.",
+    author: "Ananya Gupta"
   },
   {
-    quote: "The linen shirt I got tailored was so light and airy, perfect for summer weddings.",
-    author: "Rahul Mehra"
+    quote: "Lightweight, breezy, and elegant. The organza Saree is perfect for summer day weddings.",
+    author: "Meera Nair"
   },
   {
-    quote: "Best bespoke tailoring experience. They really understood my style and fit preference.",
-    author: "Imran Qureshi"
+    quote: "I was worried about ordering ethnic wear online, but the fit was perfect. R Rivaaz is now my go-to.",
+    author: "Sana Sheikh"
   },
   {
-    quote: "Got a blazer stitched for an event, and people couldn’t stop asking me where it was from!",
-    author: "Arjun Sharma"
+    quote: "The fusion suit set is a head-turner! I love how they blend tradition with modern cuts.",
+    author: "Kavita Joshi"
   },
   {
-    quote: "From measurement to delivery, everything was seamless. The fabric quality is unmatched.",
-    author: "Zeeshan Ansari"
+    quote: "From packaging to the fabric feel, everything screams premium. Truly a royal experience.",
+    author: "Zainab Ali"
   }
 ];
 
@@ -280,9 +287,9 @@ const HomePage = () => {
     <div className="HomePageWrapper  bg-[#f2f2f2] text-slate-800 font-montserrat overflow-x-hidden">
       {/* Hero Section */}
       <div className="container mx-auto text-center pt-20 md:pt-28 pb-12 px-4" data-aos="fade-up">
-        <h1 className="font-marcellus text-5xl sm:text-6xl md:text-7xl mb-4 text-slate-900">Rely Tailors</h1>
+        <h1 className="font-marcellus text-5xl sm:text-6xl md:text-7xl mb-4 text-slate-900">RRiwaaz</h1>
         <p className="max-w-xl sm:max-w-2xl mx-auto text-slate-600 text-base sm:text-lg">
-          With over 35 years of masterful craftsmanship, we create more than just suits; we tailor experiences. Each stitch is a testament to our legacy of quality and precision, ensuring you look and feel exceptional.
+         Discover our exclusive collection of handpicked Sarees, designer Lehengas, and intricately embroidered Suits. Whether it's a casual Kurti for the day or a heavy Dupatta for the evening, find your perfect fit at R Rivaaz.
         </p>
       </div>
 
@@ -322,28 +329,28 @@ const HomePage = () => {
         </button>
       </div>
 
-      {/* Features Section */}
+     {/* Features Section */}
       <div className="container mx-auto px-4 py-16 border-t border-slate-200">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
           <div data-aos="fade-up" data-aos-delay="0">
             <CalendarIcon />
-            <h3 className="font-marcellus text-2xl">Book An Appointment</h3>
-            <p className="text-sm text-black text-500 mt-2">Schedule a private consultation with our master tailors at your convenience.</p>
+            <h3 className="font-marcellus text-2xl">On-Time Delivery</h3>
+            <p className="text-sm text-black text-500 mt-2">We ensure your outfit reaches you promptly before your special occasion.</p>
           </div>
           <div data-aos="fade-up" data-aos-delay="100">
             <RulerIcon />
-            <h3 className="font-marcellus text-2xl">Perfect Fit Guarantee</h3>
-            <p className="text-sm text-black text-500 mt-2">We ensure every garment is tailored to your exact measurements for a flawless fit.</p>
+            <h3 className="font-marcellus text-2xl">Custom Stitching</h3>
+            <p className="text-sm text-black text-500 mt-2">Get your Lehengas and Suits stitched to your exact measurements.</p>
           </div>
           <div data-aos="fade-up" data-aos-delay="200">
             <ScissorIcon />
-            <h3 className="font-marcellus text-2xl">Expert Alterations</h3>
-            <p className="text-sm text-black text-500 mt-2">Our skilled team provides meticulous alterations to perfect your existing wardrobe.</p>
+            <h3 className="font-marcellus text-2xl">Handcrafted Detail</h3>
+            <p className="text-sm text-black text-500 mt-2">Intricate embroidery and flawless finishing by master artisans.</p>
           </div>
           <div data-aos="fade-up" data-aos-delay="300">
             <FabricIcon />
             <h3 className="font-marcellus text-2xl">Premium Fabrics</h3>
-            <p className="text-sm text-black text-500 mt-2">Choose from a curated selection of the world's finest and most luxurious materials.</p>
+            <p className="text-sm text-black text-500 mt-2">Curated selection of the finest silks, georgettes, and velvets.</p>
           </div>
         </div>
       </div>
@@ -474,7 +481,7 @@ const HomePage = () => {
             </a>
           ))}
         </div>
-        <a href="https://www.instagram.com/reliance_tailor_s?igsh=c3JsZWtxY25jM3Zr" className="inline-block mt-12 bg-slate-900 text-white font-bold py-3 px-8 rounded-sm hover:bg-slate-800 transition-colors duration-300 text-sm uppercase tracking-widest">
+        <a href="https://www.instagram.com/rriwaaz?igsh=MW42NThrcmQ5bDRocw==" className="inline-block mt-12 bg-slate-900 text-white font-bold py-3 px-8 rounded-sm hover:bg-slate-800 transition-colors duration-300 text-sm uppercase tracking-widest">
           Follow us on Instagram
         </a>
       </div>

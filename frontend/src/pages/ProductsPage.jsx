@@ -7,24 +7,22 @@ import { productListRequest, productListSuccess, productListFail } from '../feat
 import ProductCard from '../components/ProductCard';
 import api from '../api/AxiosAPI';
 
-const categories = ['All', 'Suits', 'Blazers', 'Shirts', 'Kurtas', 'Polo T-Shirts', 'Indo Western', 'Wedding', 'Formal'];
+// UPDATED: Categories for R Rivaaz (Women's Clothing)
+const categories = [
+  'All', 
+  'Lehengas', 
+  'Sarees', 
+  'Kurtis'
+];
 
 const BackgroundCubes = () => (
   <div className="absolute inset-0 z-0 overflow-hidden">
     <ul className="circles">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
     </ul>
   </div>
 );
+
 const ProductGridSkeleton = () => (
   <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-8 md:gap-x-6 md:gap-y-12 animate-pulse">
     {[...Array(9)].map((_, i) => (
@@ -96,7 +94,6 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   );
 };
 
-
 const ProductsPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -109,9 +106,10 @@ const ProductsPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [activeCategory, setActiveCategory] = useState('All');
 
+  // UPDATED: Logic to handle URL parameters for new categories
   const formatCategoryFromParam = (param) => {
     if (!param) return 'All';
-    if (param.toLowerCase() === 'polo-t-shirts') return 'Polo T-Shirts';
+    // Removed strict check for Polo T-Shirts since it's removed
     return param.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
   };
 
@@ -169,7 +167,6 @@ const ProductsPage = () => {
     return (
       <motion.div key="product-grid" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-8 md:gap-x-6 md:gap-y-12">
-          
           {products.map((product, index) => (
             <ProductCard key={product._id || index} product={product} />
           ))}
@@ -181,13 +178,10 @@ const ProductsPage = () => {
 
   return (
     <div className="bg-white min-h-screen font-sans">
-      
       <MobileFilterSidebar isOpen={isFilterOpen} onClose={() => setIsFilterOpen(false)} categories={categories} activeCategory={activeCategory} onSelectCategory={handleFilter} />
 
       <div className="container mx-auto px-4 sm:px-6 py-8 md:py-12">
-
         <div className="lg:hidden">
-          
           <header className="text-center mb-6">
             <h1 className="text-4xl font-bold text-zinc-900 font-marcellus">
               {activeCategory === 'All' ? 'All Products' : activeCategory}
@@ -207,10 +201,9 @@ const ProductsPage = () => {
           </div>
         </div>
 
-        {/* --- DESKTOP LAYOUT (grid) --- */}
+        {/* --- DESKTOP LAYOUT --- */}
         <div className="grid grid-cols-1 lg:grid-cols-4 lg:gap-12">
-
-          {/* --- DESKTOP SIDEBAR (hidden lg:block) --- */}
+          {/* --- DESKTOP SIDEBAR --- */}
           <aside className="hidden lg:block lg:col-span-1">
             <div className="sticky top-24">
               <h3 className="font-bold text-lg mb-4 text-zinc-800 tracking-wide">Categories</h3>
@@ -229,9 +222,8 @@ const ProductsPage = () => {
             </div>
           </aside>
 
-          {/* --- MAIN CONTENT & PRODUCT GRID --- */}
+          {/* --- MAIN CONTENT --- */}
           <main className="lg:col-span-3">
-            {/* Desktop Header & Search */}
             <div className="hidden lg:flex justify-between items-center mb-8 pb-4 border-b border-zinc-200">
               <div>
                 <h1 className="text-4xl font-bold text-zinc-900 font-marcellus">
@@ -253,7 +245,6 @@ const ProductsPage = () => {
               {renderContent()}
             </AnimatePresence>
           </main>
-
         </div>
       </div>
     </div>

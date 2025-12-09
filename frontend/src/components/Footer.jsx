@@ -12,9 +12,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
           <div className="md:col-span-1">
-            <h3 className="font-marcellus text-2xl mb-4">RELY TAILORS</h3>
+            <h3 className="font-marcellus text-2xl mb-4">R Riwaaz</h3>
             <p className="text-sm text-slate-400">
-              Crafting timeless elegance and perfect fits for the discerning gentleman since 1988.
+              Crafting timeless elegance and perfect fits for the discerning gentleman since 2020.
             </p>
           </div>
 
@@ -22,9 +22,9 @@ const Footer = () => {
             <h4 className="font-bold uppercase tracking-wider mb-4">Shop</h4>
             <div className="flex flex-col space-y-3 text-sm text-slate-400">
               <Link to="/products/suits" className="hover:text-amber-500 transition-colors">Suits</Link>
-              <Link to="/products/blazers" className="hover:text-amber-500 transition-colors">Blazers</Link>
-              <Link to="/products/shirts" className="hover:text-amber-500 transition-colors">Shirts</Link>
-              <Link to="/products/accessories" className="hover:text-amber-500 transition-colors">Accessories</Link>
+              <Link to="/products/blazers" className="hover:text-amber-500 transition-colors">Lehnga</Link>
+              <Link to="/products/shirts" className="hover:text-amber-500 transition-colors">Kurti</Link>
+              <Link to="/products/accessories" className="hover:text-amber-500 transition-colors">Saree</Link>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-16 border-t border-slate-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500 space-y-4 md:space-y-0">
-            <p>&copy; 2025 Rely Tailors. All Rights Reserved.</p>
+            <p>&copy; 2025 R Riwaaz. All Rights Reserved.</p>
             
             {/* DEVELOPER CREDITS AS A PARAGRAPH */}
             <p className="text-slate-500">

@@ -553,9 +553,9 @@ const ProductDetailPage = () => {
                             </div>
                             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
                                 <div className="p-12 sm:p-16 text-white">
-                                    <h2 className="font-serif text-4xl font-bold">The Rely Tailors Difference</h2>
+                                    <h2 className="font-serif text-4xl font-bold">The R Riwaaz Difference</h2>
                                     <p className="text-slate-300 mt-4 mb-8 max-w-lg">
-                                        For over 35 years, we have been the architects of confidence. Our philosophy is simple: a perfect suit is a blend of art, precision, and personal expression.
+                                        For over 5 years, we have been the architects of confidence. Our philosophy is simple: a perfect dress is a blend of art, precision, and personal expression.
                                     </p>
                                     <Link to="/about" className="inline-block bg-white text-slate-900 font-bold py-3 px-8 rounded-lg hover:bg-slate-200 no-underline transition-colors">Our Story</Link>
                                 </div>

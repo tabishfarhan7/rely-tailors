@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { f2 } from '../assets/index';
-
+// import desi from '../assets/desi.jpeg';
+import lehngaaa from '../assets/lehngaaa.jpeg';
 // Animated Background Component
 const BackgroundCubes = () => (
   <div className="absolute inset-0 z-0 overflow-hidden">
@@ -261,7 +262,7 @@ const ContactPage = () => {
           <div className="bg-white p-8 md:p-12 rounded-lg shadow-xl flex flex-col md:flex-row gap-8 md:gap-16 items-center">
             <div className="w-full md:w-1/2" data-aos="fade-right">
               <h2 className="font-marcellus text-4xl md:text-5xl text-slate-900">Come & Say Hi</h2>
-              <h3 className="font-semibold text-xl mt-6 md:mt-8 mb-2">Rely Tailors</h3>
+              <h3 className="font-semibold text-xl mt-6 md:mt-8 mb-2">R Riwaaz</h3>
               <p className="text-slate-600">
                 123 Fashion Avenue, Suite 101<br />
                 New York, NY 10001
@@ -269,7 +270,7 @@ const ContactPage = () => {
             </div>
             <div className="w-full md:w-1/2" data-aos="fade-left">
               <img
-                src={f2}
+                src={lehngaaa}
                 alt="A stylish man in a custom suit"
                 className="w-full h-auto max-h-96 object-contain rounded-sm"
               />

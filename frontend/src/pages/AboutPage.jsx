@@ -1,9 +1,16 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { insta1, insta2, insta3 } from '../assets/index';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import chote from '../assets/chote.webp';
+
+// Importing your R Rivaaz assets
+// Ensure these match your actual file paths
+import lehngaImage from '../assets/lehnga.jpeg';
+import sareeImage from '../assets/saree.jpeg';
+import kurtiImage from '../assets/kurti.jpeg'; 
+import suitImage from '../assets/suit.jpeg';
+import shadi from '../assets/shadi.jpg';
+import shadi2 from '../assets/shadi2.jpg';
 
 // Animated Background Component
 const BackgroundCubes = () => (
@@ -34,7 +41,7 @@ const AboutPage = () => {
   }, []);
 
   return (
-    <div className="HomePageWrapper  bg-white font-montserrat text-slate-800 overflow-x-hidden">
+    <div className="HomePageWrapper bg-white font-montserrat text-slate-800 overflow-x-hidden">
 
       {/* --- Hero Section --- */}
       <div className="container mx-auto px-6 py-16 md:py-24">
@@ -42,33 +49,34 @@ const AboutPage = () => {
           <div data-aos="fade-right" data-aos-delay="200" className="flex justify-center">
             <div className="relative w-full max-w-md">
               <img
-                src={insta1}
-                alt="A master tailor measuring fabric"
-                className="w-full h-90 object-contain rounded-lg"
+                src={shadi}
+                alt="Intricate Indian Bridal Wear"
+                className="w-full h-90 object-cover rounded-lg shadow-xl"
               />
-              <div className="absolute -bottom-4 -right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg">
-                <span className="block text-2xl font-bold">35+</span>
-                <span className="text-sm">Years Experience</span>
+              <div className="absolute -bottom-4 -right-4 bg-slate-900 text-white p-4 rounded-lg shadow-lg">
+                <span className="block text-2xl font-bold text-amber-500">5+</span>
+                <span className="text-sm">Years of Heritage</span>
               </div>
             </div>
           </div>
           <div data-aos="fade-left" data-aos-delay="400">
             <h1 className="font-marcellus text-4xl md:text-5xl text-slate-900 leading-tight tracking-tight">
-              Precision Tailoring <br /> for the Modern Individual
+              Weaving Tradition into <br /> <span className="text-amber-700">Timeless Elegance</span>
             </h1>
-            <p className="text-slate-600 mt-6 leading-relaxed">
-              At Rely Tailors, we believe that clothing should be an extension of your personality.
-              Our master craftsmen combine traditional techniques with contemporary design to create
-              garments that not only fit perfectly but tell your unique story.
+            <p className="text-slate-600 mt-6 leading-relaxed text-lg">
+              At <strong>R Rivaaz</strong>, we believe every garment tells a story. 
+              We blend the rich heritage of Indian craftsmanship with contemporary silhouettes 
+              to create ensembles that celebrate the modern woman. From the royal drape of a Saree 
+              to the intricate embroidery of a Lehenga, we craft art you can wear.
             </p>
             <div className="mt-8 grid grid-cols-2 gap-4">
-              <div className="bg-slate-100 p-3 rounded-lg">
-                <span className="font-semibold text-slate-900 block">5000+</span>
-                <span className="text-sm text-slate-600">Satisfied Clients</span>
+              <div className="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                <span className="font-semibold text-slate-900 block text-xl">5000+</span>
+                <span className="text-sm text-slate-600">Happy Customers</span>
               </div>
-              <div className="bg-slate-100 p-3 rounded-lg">
-                <span className="font-semibold text-slate-900 block">100%</span>
-                <span className="text-sm text-slate-600">Handcrafted</span>
+              <div className="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                <span className="font-semibold text-slate-900 block text-xl">100%</span>
+                <span className="text-sm text-slate-600">Handcrafted Detail</span>
               </div>
             </div>
           </div>
@@ -80,218 +88,164 @@ const AboutPage = () => {
         <BackgroundCubes />
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-12" data-aos="fade-up">
-            <h2 className="font-marcellus text-3xl md:text-4xl text-slate-900 mb-4">Our Tailoring Philosophy</h2>
-            <p className="text-slate-600 max-w-3xl mx-auto">We combine time-honored techniques with innovative approaches to create garments that stand the test of time.</p>
+            <h2 className="font-marcellus text-3xl md:text-4xl text-slate-900 mb-4">Our Philosophy</h2>
+            <p className="text-slate-600 max-w-3xl mx-auto">Where age-old traditions meet modern grace.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center" data-aos="fade-up" data-aos-delay="200">
               <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                <span className="text-2xl">✂️</span>
+                <span className="text-2xl">✨</span>
               </div>
-              <h3 className="font-semibold text-lg mb-2">Precision Craftsmanship</h3>
-              <p className="text-slate-600 text-sm">Every stitch is placed with intention, ensuring durability and perfect fit that lasts for years.</p>
+              <h3 className="font-semibold text-lg mb-2">Intricate Karigari</h3>
+              <p className="text-slate-600 text-sm">Our master artisans spend hours perfecting every bead, thread, and sequin to ensure your outfit shines.</p>
             </div>
 
             <div className="text-center" data-aos="fade-up" data-aos-delay="400">
               <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
                 <span className="text-2xl">🌿</span>
               </div>
-              <h3 className="font-semibold text-lg mb-2">Sustainable Practices</h3>
-              <p className="text-slate-600 text-sm">We source quality fabrics responsibly and minimize waste through made-to-order production.</p>
+              <h3 className="font-semibold text-lg mb-2">Authentic Fabrics</h3>
+              <p className="text-slate-600 text-sm">We source the finest silks, georgettes, and organzas directly from weavers across the country.</p>
             </div>
 
             <div className="text-center" data-aos="fade-up" data-aos-delay="600">
               <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                <span className="text-2xl">👔</span>
+                <span className="text-2xl">💃</span>
               </div>
-              <h3 className="font-semibold text-lg mb-2">Personalized Experience</h3>
-              <p className="text-slate-600 text-sm">From consultation to final fitting, we guide you through creating your perfect garment.</p>
+              <h3 className="font-semibold text-lg mb-2">Custom Fitting</h3>
+              <p className="text-slate-600 text-sm">Every body is unique. We ensure your Lehengas and Suits are tailored to fit your shape perfectly.</p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* --- Meet the Artisans Section --- */}
+      {/* --- Meet the Designers Section --- */}
       <div className="py-16 md:py-24">
         <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div data-aos="zoom-in" data-aos-delay="300" className="flex justify-center">
+          <div data-aos="zoom-in" data-aos-delay="300" className="flex justify-center order-2 md:order-1">
+             {/* Using Suit/Kurti image here to show detailed work */}
             <div className="relative w-full max-w-md">
               <img
-                src={chote}
-                alt="Tailor at work"
-                className="w-full h-90 object-contain rounded-lg shadow-md"
+                src={shadi2}
+                alt="Artisan working on embroidery"
+                className="w-full h-90 object-cover rounded-lg shadow-md"
               />
-              <div className="absolute -bottom-4 -left-4 bg-amber-600 text-white p-3 rounded-lg shadow-lg">
-                <span className="block text-sm">Master Tailor</span>
-                <span className="text-xs">Since 1995</span>
+              <div className="absolute -bottom-4 -left-4 bg-amber-700 text-white p-3 rounded-lg shadow-lg">
+                <span className="block text-sm">Master Craftsmanship</span>
+                <span className="text-xs">Since 1988</span>
               </div>
             </div>
           </div>
-          <div data-aos="fade-left" data-aos-delay="500">
+          <div data-aos="fade-left" data-aos-delay="500" className="order-1 md:order-2">
             <h2 className="font-marcellus text-3xl md:text-4xl text-slate-900 mb-6">
-              Meet the Artisans <br /> Behind Your Garments
+              Designed for the <br /> Royal in You
             </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              At Rely Tailors, every stitch tells a story. Behind each custom suit is a team of
-              passionate artisans who have honed their skills over decades. Our master tailors blend
-              timeless techniques with contemporary sensibilities to create garments that truly reflect your personality.
+              At R Rivaaz, fashion is an emotion. Behind every collection is a dedicated team of designers 
+              and kaarigars (artisans) who breathe life into fabric. We honor the legacy of Indian textiles 
+              while innovating with cuts and colors that appeal to the contemporary woman.
             </p>
             <p className="text-slate-600 leading-relaxed mb-6">
-              From the initial measurements to the final press, our process is guided by precision and care.
-              We take pride in our attention to detail—whether it's the perfect lapel roll, the precise sleeve pitch,
-              or the flawless drape of the trousers.
+              Whether it's the heavy Zardosi work for a bride or a breezy Chikankari Kurti for a summer lunch, 
+              precision is our promise. We don't just make clothes; we create heirlooms.
             </p>
             <Link
               to="/contact"
-              className="inline-block bg-slate-800 text-white font-semibold py-4 px-8 rounded-sm shadow-md hover:bg-slate-900 transition-all duration-300 text-sm uppercase tracking-widest"
+              className="inline-block bg-slate-900 text-white font-semibold py-4 px-8 rounded-sm shadow-md hover:bg-slate-800 transition-all duration-300 text-sm uppercase tracking-widest"
             >
-              Schedule a Consultation
+              Book a Styling Session
             </Link>
           </div>
         </div>
       </div>
 
-      {/* --- Services Section with SVG Background --- */}
-      <div className="bg-[#f2f2f2] py-16 md:py-24 relative">
+      {/* --- Services Section --- */}
+      <div className="bg-[#f9f9f9] py-16 md:py-24 relative">
         <BackgroundCubes />
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-12" data-aos="fade-up">
-            <h2 className="font-marcellus text-3xl md:text-4xl text-slate-900 mb-4">Our Tailoring Services</h2>
-            <p className="text-slate-600 max-w-3xl mx-auto">We offer a comprehensive range of tailoring services to meet all your sartorial needs.</p>
+            <h2 className="font-marcellus text-3xl md:text-4xl text-slate-900 mb-4">Our Collections & Services</h2>
+            <p className="text-slate-600 max-w-3xl mx-auto">From bridal trousseaus to everyday ethnic chic.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ServiceCard
-              icon="👔"
-              title="Bespoke Suiting"
-              description="Complete custom suits crafted from scratch based on your precise measurements and style preferences."
+              icon="👰"
+              title="Bridal Couture"
+              description="Exquisite Lehengas and heavy Suits designed to make your special day truly unforgettable."
             />
             <ServiceCard
-              icon="👚"
-              title="Shirt Making"
-              description="Custom shirts with options for collar styles, cuffs, plackets, and fabric selection for perfect fit and comfort."
-            />
-            <ServiceCard
-              icon="🔧"
-              title="Alterations & Repairs"
-              description="Expert alterations to refine the fit of your existing garments and quality repairs to extend their lifespan."
-            />
-            <ServiceCard
-              icon="🎩"
-              title="Formal Wear"
-              description="Elegant tuxedos and formal attire for special occasions, tailored to make you stand out."
+              icon="👗"
+              title="Custom Stitching"
+              description="Get your dream outfit stitched to perfection. You choose the design; we bring it to life."
             />
             <ServiceCard
               icon="🧵"
-              title="Restoration Services"
-              description="Breathing new life into cherished garments through careful restoration and refurbishment."
+              title="Hand Embroidery"
+              description="Specializing in Zardosi, Phulkari, and Mirror work to add that royal touch to your garments."
             />
             <ServiceCard
-              icon="📏"
-              title="Personal Fittings"
-              description="In-person or virtual consultations to ensure perfect measurements and style choices."
+              icon="🧣"
+              title="Sarees & Drapes"
+              description="A curated collection of Banarasi, Silk, and Designer Sarees for every occasion."
+            />
+            <ServiceCard
+              icon="✂️"
+              title="Alterations"
+              description="Expert fitting adjustments to ensure your existing ethnic wear fits you like a glove."
+            />
+            <ServiceCard
+              icon="🎁"
+              title="Trousseau Packing"
+              description="Elegant packaging services to present your wedding gifts and outfits with style."
             />
           </div>
         </div>
       </div>
 
-      {/* --- Our Craft Section --- */}
-      <div className="container mx-auto px-6 py-16 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div data-aos="fade-right" data-aos-delay="200">
-            <h2 className="font-marcellus text-3xl md:text-4xl text-slate-900 mb-6">
-              The Rely Tailors <br /> Difference
-            </h2>
-            <p className="text-slate-600 leading-relaxed mb-4">
-              Since 1988, Rely Tailors has been more than just a brand; it's a legacy. Founded on
-              precision, artistry, and respect for classic menswear, we've dedicated over three decades
-              to perfecting the craft of bespoke tailoring.
-            </p>
-            <p className="text-slate-600 leading-relaxed mb-6">
-              What sets us apart is our commitment to the entire process—from selecting the finest fabrics
-              from renowned mills to the hand-stitched details that ensure superior quality and comfort.
-              Our garments are investments designed to last for decades, not just seasons.
-            </p>
-            <div className="space-y-3 mb-6">
-              <div className="flex items-start">
-                <span className="text-green-600 text-lg mr-2">✓</span>
-                <p className="text-slate-600 text-sm">Premium fabrics from world-renowned mills</p>
-              </div>
-              <div className="flex items-start">
-                <span className="text-green-600 text-lg mr-2">✓</span>
-                <p className="text-slate-600 text-sm">Traditional techniques with modern aesthetics</p>
-              </div>
-              <div className="flex items-start">
-                <span className="text-green-600 text-lg mr-2">✓</span>
-                <p className="text-slate-600 text-sm">Lifetime adjustments on all bespoke garments</p>
-              </div>
-            </div>
-            <Link
-              to="/products"
-              className="inline-block bg-slate-800 text-white font-semibold py-4 px-8 rounded-sm shadow-md hover:bg-slate-900 transition-all duration-300 text-sm uppercase tracking-widest"
-            >
-              Explore Our Creations
-            </Link>
-          </div>
-          <div data-aos="fade-left" data-aos-delay="400" className="flex justify-center">
-            <div className="relative w-full max-w-md">
-              <img
-                src={insta2}
-                alt="A stylish man in a custom suit"
-                className="w-full h-90 object-contain rounded-lg shadow-md"
-              />
-              <div className="absolute -bottom-4 -right-4 bg-slate-800 text-white p-3 rounded-lg shadow-lg">
-                <span className="block text-sm">Custom Fit Guarantee</span>
-                <span className="text-xs">Perfect Fit Every Time</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* --- Testimonials Section with SVG Background --- */}
+      {/* --- Testimonials Section --- */}
       <div className="bg-slate-900 text-white py-16 md:py-24 relative">
         <BackgroundCubes />
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-12" data-aos="fade-up">
-            <h2 className="font-marcellus text-3xl md:text-4xl mb-4">Client Testimonials</h2>
-            <p className="text-slate-300 max-w-3xl mx-auto">Hear what our clients have to say about their experience with Rely Tailors.</p>
+            <h2 className="font-marcellus text-3xl md:text-4xl mb-4">Client Love</h2>
+            <p className="text-slate-300 max-w-3xl mx-auto">Stories from women who chose R Rivaaz.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-slate-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
               <div className="text-yellow-400 text-lg mb-3">★★★★★</div>
-              <p className="text-slate-300 italic mb-4 text-sm">"My Rely Tailors suit fits perfectly and receives compliments every time I wear it. The attention to detail is remarkable."</p>
+              <p className="text-slate-300 italic mb-4 text-sm">"The velvet Lehenga I bought for my sister's wedding was stunning. The fitting was flawless right out of the box!"</p>
               <div className="flex items-center">
-                <div className="w-10 h-10 bg-slate-700 rounded-full mr-3 flex items-center justify-center">M</div>
+                <div className="w-10 h-10 bg-amber-700 rounded-full mr-3 flex items-center justify-center text-white font-bold">A</div>
                 <div>
-                  <h4 className="font-semibold text-sm">Michael Thompson</h4>
-                  <p className="text-xs text-slate-400">Business Executive</p>
+                  <h4 className="font-semibold text-sm">Ayesha Khan</h4>
+                  <p className="text-xs text-slate-400">Delhi</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-slate-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="400">
               <div className="text-yellow-400 text-lg mb-3">★★★★★</div>
-              <p className="text-slate-300 italic mb-4 text-sm">"The team at Rely Tailors transformed my wedding day look. Their expertise in formal wear is unmatched."</p>
+              <p className="text-slate-300 italic mb-4 text-sm">"Finally found a brand that understands ethnic chic. My office wear Kurtis are so comfortable and stylish."</p>
               <div className="flex items-center">
-                <div className="w-10 h-10 bg-slate-700 rounded-full mr-3 flex items-center justify-center">J</div>
+                <div className="w-10 h-10 bg-amber-700 rounded-full mr-3 flex items-center justify-center text-white font-bold">P</div>
                 <div>
-                  <h4 className="font-semibold text-sm">James Wilson</h4>
-                  <p className="text-xs text-slate-400">Bridegroom</p>
+                  <h4 className="font-semibold text-sm">Priya Sharma</h4>
+                  <p className="text-xs text-slate-400">Mumbai</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-slate-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="600">
               <div className="text-yellow-400 text-lg mb-3">★★★★★</div>
-              <p className="text-slate-300 italic mb-4 text-sm">"I've been a client for over 10 years. Their consistency, quality, and personal service keep me coming back."</p>
+              <p className="text-slate-300 italic mb-4 text-sm">"I was skeptical about ordering a Saree online, but the silk quality is pure luxury. R Rivaaz is now my go-to."</p>
               <div className="flex items-center">
-                <div className="w-10 h-10 bg-slate-700 rounded-full mr-3 flex items-center justify-center">R</div>
+                <div className="w-10 h-10 bg-amber-700 rounded-full mr-3 flex items-center justify-center text-white font-bold">Z</div>
                 <div>
-                  <h4 className="font-semibold text-sm">Robert Chen</h4>
-                  <p className="text-xs text-slate-400">Long-term Client</p>
+                  <h4 className="font-semibold text-sm">Zara Malik</h4>
+                  <p className="text-xs text-slate-400">Bangalore</p>
                 </div>
               </div>
             </div>
@@ -302,22 +256,22 @@ const AboutPage = () => {
       {/* --- CTA Section --- */}
       <div className="bg-amber-50 py-16 md:py-20">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="font-marcellus text-3xl md:text-4xl text-slate-900 mb-4" data-aos="fade-up">Experience the Art of Bespoke Tailoring</h2>
+          <h2 className="font-marcellus text-3xl md:text-4xl text-slate-900 mb-4" data-aos="fade-up">Embrace the R Rivaaz Elegance</h2>
           <p className="max-w-3xl mx-auto text-slate-700 mb-8" data-aos="fade-up" data-aos-delay="200">
-            Schedule a consultation with our master tailors and discover the difference that personalized, handcrafted clothing can make.
+            Explore our latest collection or book a video consultation to get your outfit customized from the comfort of your home.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
             <Link
-              to="/contact"
+              to="/products"
               className="inline-block bg-slate-900 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-slate-800 transition-all duration-300 text-sm uppercase tracking-widest"
             >
-              Book an Appointment
+              Shop Collection
             </Link>
             <Link
-              to="/products"
+              to="/contact"
               className="inline-block border border-slate-900 text-slate-900 font-semibold py-3 px-8 rounded-lg hover:bg-slate-900 hover:text-white transition-all duration-300 text-sm uppercase tracking-widest"
             >
-              Explore Services
+              Contact Us
             </Link>
           </div>
         </div>

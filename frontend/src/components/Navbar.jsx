@@ -68,7 +68,7 @@ const Navbar = () => {
             <div className="container mx-auto px-6 h-full flex justify-between items-center">
                 {/* Left Side: Logo */}
                 <Link to="/">
-                    <span className="hidden md:block text-3xl font-marcellus tracking-wider">RELY TAILORS</span>
+                    <span className="hidden md:block text-3xl font-marcellus tracking-wider">R Riwaaz</span>
                     <img src={relyLogo} alt="Rely Tailors Logo" className="block md:hidden h-20 w-auto" />
                 </Link>
 
