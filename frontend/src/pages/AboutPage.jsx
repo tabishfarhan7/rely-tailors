@@ -8,7 +8,7 @@ import {
   Gem, 
   ShoppingBag, 
   Gift, 
-  Needle, 
+  Spool, 
   Quote 
 } from 'lucide-react';
 
@@ -199,7 +199,7 @@ const AboutPage = () => {
               description="Exquisite Lehengas and heavy Suits designed to make your special day truly unforgettable."
             />
             <ServiceCard
-              icon={Needle}
+              icon={Spool}
               title="Custom Stitching"
               description="Get your dream outfit stitched to perfection. You choose the design; we bring it to life."
             />

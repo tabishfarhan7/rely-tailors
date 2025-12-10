@@ -184,7 +184,7 @@ const HomePage = () => {
         <div className="container mx-auto text-center max-w-4xl">
           <h2 className="text-amber-700 text-sm font-bold tracking-[0.3em] uppercase mb-4">Est. 2025</h2>
           <h1 className="font-marcellus text-6xl sm:text-7xl md:text-8xl mb-6 text-stone-900 tracking-tight">
-            RRiwaaz
+            रRiwaaz
           </h1>
           <div className="h-[1px] w-24 bg-stone-300 mx-auto mb-8"></div>
           <p className="text-stone-600 text-lg sm:text-xl font-light leading-relaxed mb-10">

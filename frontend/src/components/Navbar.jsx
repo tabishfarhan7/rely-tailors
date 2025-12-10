@@ -90,7 +90,7 @@ const Navbar = () => {
                     {/* Left Side: Logo */}
                     <Link to="/" className="flex-shrink-0">
                         <span className="hidden md:block text-4xl font-marcellus text-stone-900 tracking-tight">
-                            RRiwaaz
+                           रRiwaaz
                         </span>
                         <img src={relyLogo} alt="RRiwaaz Logo" className="block md:hidden h-12 w-auto object-contain" />
                     </Link>
