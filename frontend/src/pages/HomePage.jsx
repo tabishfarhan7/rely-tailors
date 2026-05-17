@@ -26,7 +26,7 @@ const categories = [
   { _id: '1', name: 'Kurti', image: home, description: 'Chic, comfortable styles designed for your everyday elegance.' },
   { _id: '2', name: 'Lehnga', image: lehngaImage, description: 'Regal silhouettes and intricate embroidery for your grandest moments.' },
   { _id: '3', name: 'Saree', image: sareeImage, description: 'Six yards of timeless grace blending heritage with modern style.' },
-  { _id: '4', name: 'Dupatta', image: dupattaImage, description: 'Exquisite drapes to add a luxurious finish to any ensemble.' },
+  // { _id: '4', name: 'Dupatta', image: dupattaImage, description: 'Exquisite drapes to add a luxurious finish to any ensemble.' },
   { _id: '5', name: 'Suit', image: suitImage, description: 'Beautifully tailored suits that perfectly balance tradition and trend.' },
 ];
 
@@ -182,7 +182,7 @@ const HomePage = () => {
          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-full bg-gradient-to-b from-rose-50 to-transparent -z-10 opacity-50 blur-3xl rounded-full"></div>
          
         <div className="container mx-auto text-center max-w-4xl">
-          <h2 className="text-amber-700 text-sm font-bold tracking-[0.3em] uppercase mb-4">Est. 2025</h2>
+          <h2 className="text-amber-700 text-sm font-bold tracking-[0.3em] uppercase mb-4">Est. 2023</h2>
           <h1 className="font-marcellus text-6xl sm:text-7xl md:text-8xl mb-6 text-stone-900 tracking-tight">
             Rरिwaaz
           </h1>
